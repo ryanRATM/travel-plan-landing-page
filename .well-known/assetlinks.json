@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lulu_tech.travelbud",
+      "sha256_cert_fingerprints": ["36:48:a8:8e:70:d8:d6:1a:9a:2f:bf:b5:f9:c9:e9:1e:6b:40:e1:44:5b:11:3c:bf:47:1d:5a:68:5e:15:28:17"]
+    }
+  }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Group Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    .button { display: inline-block; padding: 15px 30px; margin: 10px; 
+              background: #007AFF; color: white; text-decoration: none; 
+              border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Join Our Group Chat!</h1>
+  <p>Opening app...</p>
+  
+  <div id="fallback" style="display: none;">
+    <p>Don't have the app yet?</p>
+    <a href="https://apps.apple.com/app/yourapp" class="button">App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.yourcompany.yourapp" class="button">Google Play</a>
+  </div>
+
+  <script>
+    // Show fallback after 3 seconds
+    setTimeout(() => {
+      document.getElementById('fallback').style.display = 'block';
+    }, 3000);
+
+    // Try to redirect to app stores if app doesn't open
+    setTimeout(() => {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      const isAndroid = /Android/.test(navigator.userAgent);
+      
+      if (isIOS) {
+        window.location = 'https://apps.apple.com/app/yourapp';
+      } else if (isAndroid) {
+        window.location = 'https://play.google.com/store/apps/details?id=com.yourcompany.yourapp';
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
